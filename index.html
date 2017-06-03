@@ -1,56 +1,60 @@
- <html>
-  
+<!DOCTYPE html>
+<html>
 <head>
- <title>
-  九九乘法表
- </title>
- <style>
-ul.pagination {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-}
-
-ul.pagination li {display: inline;}
-
-ul.pagination li a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-ul.pagination li a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-ul.pagination li a:hover:not(.active) {background-color: #ddd;}
-</style>
+	<style>
+	.blue { 
+		background-color: white; 
+		border: none;
+		color: black;
+		padding: 8px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		-webkit-transition-duration: 0.4s; 
+		transition-duration: 0.4s;
+		cursor: pointer;
+		}
+	.blue:hover    
+		{
+    		background-color:#E0E0E0;
+    		color: white;
+		}
+		
+	</style>
 </head>
-<body>
- <ul class="pagination">  
-  <li><a href="#">1</a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">5</a></li>
-  <li><a href="#">6</a></li>
-  <li><a href="#">7</a></li>
-  <li><a href="#">8</a></li>
-  <li><a href="#">9</a></li>
-</ul>
 
-</body>
-<script>  
-for (var x = 1; x <= 9; x++) 
+	
+<body id="ok">
+<p><b>  点击数字，显示相应的乘法表</p>	   
+	<button class="blue" onclick="this.innerHTML=Myfunction(1)">1</button> &nbsp
+	<button class="blue" onclick="this.innerHTML=Myfunction(2)">2</button> &nbsp
+	<button class="blue" onclick="this.innerHTML=Myfunction(3)">3</button> &nbsp
+	<button class="blue" onclick="this.innerHTML=Myfunction(4)">4</button> &nbsp
+	<button class="blue" onclick="this.innerHTML=Myfunction(5)">5</button> &nbsp
+	<button class="blue" onclick="this.innerHTML=Myfunction(6)">6</button> &nbsp
+	<button class="blue" onclick="this.innerHTML=Myfunction(7)">7</button> &nbsp
+	<button class="blue" onclick="this.innerHTML=Myfunction(8)">8</button> &nbsp
+	<button class="blue" onclick="this.innerHTML=Myfunction(9)">9</button> &nbsp
+<b>
+<script>
+function Myfunction(n){
+document.write("<br/>");
+	for (var x = 1; x <= n; x++) 
 {  
     for (var y = 1; y <= x; y++) 
     {  
-       document.write(x + "*" + y + "=" + x * y + " ");  
+	
+	document.write("<b>");
+	document.write(x + "*" + y + "=" + x * y + "&nbsp&nbsp&nbsp&nbsp");  
      }  
-    document.write("<br/>");  
+    document.write("<br/><br/>"); 
+	
 }  
-</script> 
-  
+	document.write("<b>刷新之后再次使用</b>")
+}
+
+</script>
+</b>
+</body>
 </html>
